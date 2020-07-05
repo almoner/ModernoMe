@@ -1,14 +1,52 @@
-html{
-    box-sizing: border-box;
+@import "vars";
+@import "global";
+@import "fonts";
+
+.header__top-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-*,*::before,*::after{
-    box-sizing: inherit;
+
+.header__text {
+    margin-left: auto;
+    margin-right: 50px;
+    span {
+        color: $red;
+    }
 }
-body{
-    display:flex;
+.header__btn {
+    padding: 4px;
+    width: 72px;
+    border-radius: 4px;
+    color: #fff;
+    text-align: center;
+    font-size: 12px;
 }
-.box{
-    background-color:green;
-    width: 120px;
-    height: 140px;
+.header__btn-login {
+    background-color: $green;
+}
+.header__btn-register {
+    background-color: $red;
+    margin-left: 12px;
+}
+.header__menu {
+    background-color: $bg;
+}
+.menu {
+    display: flex;
+    align-items: center;
+    height: 60px;
+}
+.menu__list {
+    li {
+        display: inline-block;
+        & + li {
+            margin-left: 30px;
+        }
+    }
+    a{
+        color:#fff;
+        font-size: 14px;
+    }
 }

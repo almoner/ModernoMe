@@ -8,7 +8,7 @@ let gulp = require('gulp'),
     cssmin = require('gulp-cssmin');
 
 gulp.task('sass', function () {
-    return gulp.src('app/scss/style.scss')
+    return gulp.src('app/scss/**/*.scss')
         .pipe(sass({ outputStyle: 'compressed' }))
         .pipe(rename({ suffix: '.min' }))
         .pipe(browserSync.reload({stream: true}))
@@ -47,12 +47,6 @@ gulp.task('script', function () {
         .pipe(gulp.dest('app/js'))
 });
 
-gulp.task('watch', function () {
-    gulp.watch('app/scss/style.scss', gulp.parallel('sass'));
-    gulp.watch('app/*.html', gulp.parallel('html'));
-    gulp.watch('app/js/*.js', gulp.parallel('js'));
-});
-
 gulp.task('browser-sync', function () {
     browserSync.init({
         server: {
@@ -60,8 +54,11 @@ gulp.task('browser-sync', function () {
         }
     });
 });
-
-
+gulp.task('watch', function () {
+    gulp.watch('app/scss/**/*.scss', gulp.parallel('sass'));
+    gulp.watch('app/*.html', gulp.parallel('html'));
+    gulp.watch('app/js/*.js', gulp.parallel('js'));
+});
 
 /* далее перечисляем все задачи которые должны крутиться в памяти, например */
 gulp.task('default', gulp.parallel('browser-sync','sass', 'watch', 'script', 'style'));
