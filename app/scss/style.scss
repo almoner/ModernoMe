@@ -51,7 +51,6 @@
     }
 }
 .search {
-   
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -59,7 +58,7 @@
 }
 .search__inner {
     padding: 155px 0 100px;
-    color:#fff;
+    color: #fff;
     text-align: center;
     &-title {
         margin-bottom: 10px;
@@ -73,11 +72,11 @@
         font-size: 20px;
         line-height: 30px;
     }
-    &-form{
+    &-form {
         max-width: 670px;
         margin: 0 auto;
         position: relative;
-        input{
+        input {
             display: block;
             width: 100%;
             box-shadow: 0px 1px 10px 0px rgba(124, 178, 64, 0.75);
@@ -89,11 +88,11 @@
             outline: none;
             padding-left: 15px;
             padding-right: 60px;
-            &::placeholder{ 
+            &::placeholder {
                 color: #90a4ae;
             }
         }
-        button{
+        button {
             position: absolute;
             border: none;
             background-color: transparent;
@@ -102,3 +101,155 @@
         }
     }
 }
+/* start products */
+.products {
+    padding: 110px 0;
+    background-color: $grey;
+}
+.products__inner-btn {
+    line-height: 14px;
+    text-align: center;
+    margin-bottom: 60px;
+    button {
+        border: none;
+        padding: 12px 21px;
+        background-color: #fff;
+        color: $bg;
+        cursor: pointer;
+        & + button {
+            margin-left: 5px;
+        }
+        &.mixitup-control-active {
+            background-color: $red;
+            color: #fff;
+        }
+    }
+}
+.product__inner-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.product__item {
+    max-width: 442px;
+    width: 100%;
+    box-shadow: 0px 1px 2px 0px rgba(205, 214, 222, 0.75);
+    margin-bottom: 30px;
+    &-img {
+        display: block;
+        min-height: 250px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    &-content {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 30px;
+        min-height: 90px;
+        align-items: center;
+        font-weight: 500;
+        border-bottom: 2px solid #e7ecf2;
+    }
+    &-name {
+        max-width: 310px;
+    }
+    &-title {
+        color: $bg;
+        font-size: 18px;
+        display: block;
+    }
+    &-category {
+        font-size: 14px;
+        color: $green;
+        display: block;
+    }
+    &-price {
+        font-size: 20px;
+        color: $bg;
+        font-weight: 700px;
+    }
+    &-info {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 30px;
+        min-height: 70px;
+        align-items: center;
+        font-weight: 500;
+    }
+    &-author {
+        display: flex;
+        align-items: center;
+        max-width: 240px;
+        .avatar {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: inline-block;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            margin-right: 14px;
+        }
+        span {
+            font-weight: 500;
+        }
+    }
+    &-star {
+        font-size: 12px;
+        span {
+            color: $bg;
+        }
+    }
+}
+.products__bottom-btn {
+    text-align: center;
+    button {
+        margin: 45px 5px 0px;
+        box-shadow: 0px 1px 3px 0px rgba(204, 216, 228, 0.75);
+        cursor: pointer;
+        border: none;
+        background-color: #fff;
+        padding: 20px 30px;
+        color: $bg;
+        &.mixitup-control-active {
+            background-color: $red;
+            color: #fff;
+        }
+    }
+}
+.rate-star {
+    display: inline-block;
+    padding-right: 13px;
+}
+/* end products */
+/* start product-slider */
+.product-slider {
+    padding: 100px 0px 120px;
+    .slick-dots {
+        text-align: center;
+        margin-top: 50px;
+        li {
+            display: inline-block;
+            margin-left: 3px;
+            margin-left: 3px;
+&.slick-active{
+    button{
+        background-color: $green;
+    }
+}
+            button {
+                border-radius: 50%;
+                background-color: rgb(232, 232, 232);
+                border: none;
+                font-size: 0;
+                width: 16px;
+                height: 16px;
+                cursor: pointer;
+                outline: none;
+            }
+        }
+    }
+}
+
+/* end product-slider */
