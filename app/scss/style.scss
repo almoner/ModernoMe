@@ -344,9 +344,41 @@
         }
     }
     &-link {
-               font-size: 18px;
+        font-size: 18px;
         line-height: 36px;
-         padding: 14px 40px;
+        padding: 14px 40px;
         background-color: #fff;
     }
 }
+/* end author */
+/* start tutorial */
+
+.tutorial {
+    padding: 70px 0px 130px;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+
+    }
+    &__item {
+        max-width: 370px;
+        width: 100%;
+    }
+}
+.tutorial__item {
+    &-img {
+        min-height: 270px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    &-title {
+        background-color: #fff;
+        font-size: 24px;
+        text-align: center;
+        @include f700;
+        padding: 30px 10px;
+        color: $bg;
+    }
+}
+/* end tutorial */
